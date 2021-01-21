@@ -7,7 +7,9 @@ import com.cassiobruzasco.util.DateUtil
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-// Here I map all possible modules to inject dependencies at my project
+/**
+ * All possible modules to inject dependencies at this project
+ */
 val viewModels = module {
     viewModel { WeatherViewModel(get(), get()) }
 }

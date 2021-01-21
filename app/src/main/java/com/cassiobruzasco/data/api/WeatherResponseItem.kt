@@ -2,8 +2,9 @@ package com.cassiobruzasco.data.api
 
 import com.google.gson.annotations.SerializedName
 
-// My model for daily weather response
-// Here I map every single json object
+/**
+ *  Model for daily forecast weather response
+ */
 data class WeatherResponseItem(
     @SerializedName("city") val city: CityModel,
     @SerializedName("cod") val code: Int,

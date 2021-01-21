@@ -1,8 +1,9 @@
 package com.cassiobruzasco.data.api
 
-// This is our Weather Repository, it inherits our handleResponse method
-// Checking if there is a mapped error before delivering our object
-
+/**
+ * This is the Weather Repository, it inherits our handleResponse method
+ * Checking if there is a mapped error before delivering our object
+ */
 interface WeatherRepository: Repository {
     suspend fun getWeather(
         q: String,

@@ -6,9 +6,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
 
-// This is my base repository class that easily makes this app scalable for more repositories
+/**
+ * This is the base repository class that easily makes this app scalable for more repositories
+ */
 abstract class BaseRepository {
 
+    /**
+     * Handles the response from upper layer, if it has an error code it will decode and throw the
+     * exception with the message with it.
+     */
     protected suspend fun <T, R> handleResponse(
         errorBodyType: Class<R>? = null,
         call: suspend () -> Response<T>
@@ -41,6 +47,12 @@ abstract class BaseRepository {
 
 }
 
+/**
+ * Possible exceptions
+ * NumberException for wrong format of days
+ * CityNotFoundException for misspelled city name
+ * GenericException all others exception will end up as generic
+ */
 class NumberException(msg: String? = null, val errorBody: Any? = null) : Exception(msg)
 class CityNotFoundException(msg: String? = null, val errorBody: Any? = null) : Exception(msg)
 class GenericException(msg: String? = null, val errorBody: Any? = null) : Exception(msg)

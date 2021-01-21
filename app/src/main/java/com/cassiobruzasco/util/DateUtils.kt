@@ -3,15 +3,25 @@ package com.cassiobruzasco.util
 import java.text.SimpleDateFormat
 import java.util.*
 
-// This class gets the date as seconds and change to a better understanding format
+/**
+ * Class to handle date format
+ */
 class DateUtil {
 
+    /**
+     * Current Locale
+     */
     object LocaleUtil {
         val default: Locale
             get() = Locale.getDefault()
     }
 
-    fun to_dd_MMM(seconds: Long): String {
+    /**
+     * Format seconds to dd MMMM
+     * @param seconds Timestamp as seconds
+     * @return formatted string
+     */
+    fun to_dd_MMMM(seconds: Long): String {
         return try {
             val millis = seconds * 1000
             require(millis != 0L)
@@ -31,6 +41,10 @@ class DateUtil {
         }
     }
 
+    /**
+     * Get what time of the day based on singleton calendar instance
+     * @return Time of the day in 24 hour format
+     */
     fun getTimeOfDay(): Int {
         return Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
     }

@@ -4,8 +4,21 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-// My main call for getting daily forecast
+/**
+ * The call for getting daily forecast
+ */
 interface WeatherAPI {
+
+    /**
+     * The call for getting daily forecast
+     *
+     * @param location City name
+     * @param mode Data format, json or xml
+     * @param units Units of measurement
+     * @param count Number of forecast days
+     * @param apiKey Open Weather API KEY
+     *
+     */
     @GET("daily")
     suspend fun getWeather(
         @Query("q") location: String,

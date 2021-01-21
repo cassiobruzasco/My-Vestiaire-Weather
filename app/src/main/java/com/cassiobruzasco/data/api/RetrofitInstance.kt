@@ -4,7 +4,9 @@ import com.cassiobruzasco.data.api.BaseConfig.Companion.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-// This makes my retrofit instance a singleton
+/**
+ * Singleton retrofit instance
+ */
 object RetrofitInstance {
 
     private val retrofit by lazy {

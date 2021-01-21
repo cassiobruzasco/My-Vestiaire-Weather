@@ -11,6 +11,11 @@ import com.cassiobruzasco.parisweather.R
 import com.cassiobruzasco.util.DateUtil
 import kotlinx.android.synthetic.main.item_weather_recycler.view.*
 
+/**
+ * Adapter for the weather recycler view displaying detailed information for every day
+ * @param dateUtil Singleton to format dates
+ * @param item Response object to populate the user interface components
+ */
 class WeatherRecyclerAdapter(
     private val dateUtil: DateUtil,
     private var item: WeatherResponseItem
@@ -37,7 +42,7 @@ class WeatherRecyclerAdapter(
         fun bind() = with(itemView) {
             val pos = adapterPosition
 
-            date.text = dateUtil.to_dd_MMM(item.list[pos].date)
+            date.text = dateUtil.to_dd_MMMM(item.list[pos].date)
             var tempInt = 0
             var feelsLikeString = ""
             when (dateUtil.getTimeOfDay()) {

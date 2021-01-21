@@ -8,8 +8,11 @@ import com.cassiobruzasco.di.viewModels
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-// This is my main activity
-// I like to handle UI with fragments so basically I use the main activity just as a base activity for future fragment stacks
+/**
+ * The Main Activity
+ * I like to handle UI with fragments
+ * so basically I use the main activity just as a base activity for future fragment stacks
+ */
 class WeatherActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

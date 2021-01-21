@@ -1,7 +1,9 @@
 package com.cassiobruzasco.data.api
 
-// This is a constant class to provide base url, api key, and more
-// Things that wont change in the future
+/**
+ * This is a constant class to provide base url, api key, and more
+ * Things that won't change in the future
+ */
 class BaseConfig {
     companion object {
         const val BASE_URL = "https://api.openweathermap.org/data/2.5/forecast/"

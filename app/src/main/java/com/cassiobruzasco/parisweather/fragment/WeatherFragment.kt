@@ -18,7 +18,16 @@ import com.cassiobruzasco.util.ViewUtil
 import com.google.android.material.snackbar.Snackbar
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+/**
+ * The Weather Fragment
+ * Here are displayed the list containing 16 items with Paris Forecast
+ */
 class WeatherFragment: Fragment() {
+
+    companion object {
+        const val CITY = "Paris"
+        const val DAYS = 16
+    }
 
     private val mViewModel by viewModel<WeatherViewModel>()
     private lateinit var mBinding: FragmentWeatherBinding
@@ -43,9 +52,13 @@ class WeatherFragment: Fragment() {
 
         configureObservables()
         mViewModel.initialize()
-        mViewModel.getWeather("Paris", 16)
+        mViewModel.getWeather(CITY, DAYS)
     }
 
+    /**
+     * After the request is done
+     * The components that use the response objects are populated
+     */
     private fun configureComponents() {
         mBinding.cityCountry.text = getString(
             R.string.weather_fragment_city_and_country_label,
@@ -56,16 +69,23 @@ class WeatherFragment: Fragment() {
         mBinding.recycler.adapter = WeatherRecyclerAdapter(mViewModel.dateUtil, mViewModel.model.weatherOb.value!!)
     }
 
+    /**
+     * The observables that are triggered based on it's value
+     */
     private fun configureObservables() {
         mViewModel.model.weatherStateOb.observe(viewLifecycleOwner, Observer {
             handleState(it)
         })
         mViewModel.model.weatherLoadedOb.observe(viewLifecycleOwner, Observer {
             if (it) configureComponents()
-
         })
     }
 
+    /**
+     * This method handles the state based on what response the api returns
+     * The loading animation starts when the request is initialized and ends after gets a result
+     * 3 Customized snack bars to display possible erros
+     */
     private fun handleState(state: WeatherModel.WeatherState?) {
         when (state) {
             is WeatherModel.WeatherState.Loading -> {

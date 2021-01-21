@@ -1,6 +1,8 @@
 package com.cassiobruzasco.data.api
 
-// Base interface for my repositories to handle the result from calls
+/**
+ *  Base interface for the repositories to handle the result from calls
+ */
 interface Repository {
 
     fun <T> handleResult(

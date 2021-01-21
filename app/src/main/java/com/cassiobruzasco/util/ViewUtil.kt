@@ -7,7 +7,9 @@ import android.graphics.drawable.ColorDrawable
 import android.view.Window
 import com.cassiobruzasco.parisweather.R
 
-// Here I initialize a loading animation that will happen every time the app makes a request
+/**
+ * Loading dialog and animation that will happen every time the app makes a request
+ */
 class ViewUtil {
     companion object {
         fun getLoadingDialog(context: Context?): Dialog? {
