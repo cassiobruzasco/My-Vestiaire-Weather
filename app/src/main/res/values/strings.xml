@@ -3,8 +3,8 @@
     
     <!-- Snack bar errors -->
     <string name="snack_bar_generic_error">Ops… A generic error. Check your connection with the internet and try again</string>
-    <string name="snack_bar_city_error">Ops… Make sure you typed a number at day input field.</string>
-    <string name="snack_bar_number_error">Ops… Make sure you typed a real city.</string>
+    <string name="snack_bar_number_error">Ops… Make sure you typed a number at day input field.</string>
+    <string name="snack_bar_city_error">Ops… Make sure you typed a real city.</string>
 
     <!-- Recycler Strings -->
     <string name="recycler_temperature_label">%sºC</string>

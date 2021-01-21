@@ -1,18 +1,11 @@
 package com.cassiobruzasco.parisweather.fragment.adapter
 
-import android.graphics.Bitmap
-import android.graphics.drawable.Drawable
-import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.target.CustomTarget
-import com.bumptech.glide.request.transition.Transition
 import com.cassiobruzasco.data.api.*
 import com.cassiobruzasco.parisweather.R
 import com.cassiobruzasco.util.DateUtil
@@ -39,17 +32,11 @@ class WeatherRecyclerAdapter(
         holder.bind()
     }
 
-    fun updateItem(newItem: WeatherResponseItem) {
-        item = newItem
-        notifyDataSetChanged()
-    }
-
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind() = with(itemView) {
             val pos = adapterPosition
 
-            Log.d("CASSIO", "date: ${item.list[pos].date}")
             date.text = dateUtil.to_dd_MMM(item.list[pos].date)
             var tempInt = 0
             var feelsLikeString = ""

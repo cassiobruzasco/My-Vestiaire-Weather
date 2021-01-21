@@ -43,7 +43,7 @@ class WeatherFragment: Fragment() {
 
         configureObservables()
         mViewModel.initialize()
-        mViewModel.getWeather("Campinas", 16)
+        mViewModel.getWeather("Paris", 16)
     }
 
     private fun configureComponents() {
