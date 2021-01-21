@@ -8,6 +8,7 @@ class WeatherModel {
 
     val weatherOb = MutableLiveData<WeatherResponseItem>()
     val weatherStateOb = MutableLiveData<WeatherState>()
+    val weatherLoadedOb = MutableLiveData<Boolean>().apply { value = false }
 
     sealed class WeatherState {
         data class Loading(val isLoading: Boolean) : WeatherState()

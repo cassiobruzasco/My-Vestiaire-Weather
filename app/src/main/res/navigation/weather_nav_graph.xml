@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/weather_fragment_dest"
-        android:name="com.cassiobruzasco.parisweather.fragments.WeatherFragment"
+        android:name="com.cassiobruzasco.parisweather.fragment.WeatherFragment"
         tools:layout="@layout/fragment_weather">
     </fragment>
 

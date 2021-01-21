@@ -4,22 +4,28 @@ import androidx.lifecycle.viewModelScope
 import com.cassiobruzasco.data.api.CityNotFoundException
 import com.cassiobruzasco.data.api.NumberException
 import com.cassiobruzasco.data.api.WeatherRepository
+import com.cassiobruzasco.util.DateUtil
 import kotlinx.coroutines.launch
 
 // This is my View Model class, here I will handle all data before showing at the View layer
-class WeatherViewModel(private val repo: WeatherRepository): BaseViewModel() {
+class WeatherViewModel(
+    private val repo: WeatherRepository,
+    val dateUtil: DateUtil
+): BaseViewModel() {
 
     val model = WeatherModel()
 
     // Main function, this function will get my main object that contains all weather data for daily forecast
     fun getWeather(location: String, numberOfDays: Int) {
         model.weatherStateOb.value = WeatherModel.WeatherState.Loading(true)
+        model.weatherLoadedOb.value = false
         viewModelScope.launch {
             val responseData = repo.getWeather(location, numberOfDays)
             val responseDataModel = handleResponse(responseData, ::handleGetWeatherError)
             responseDataModel?.let {
                 model.weatherOb.value = it
             }
+            model.weatherLoadedOb.value = true
             model.weatherStateOb.value = WeatherModel.WeatherState.Loading(false)
         }
     }

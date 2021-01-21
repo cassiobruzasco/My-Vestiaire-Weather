@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Date"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weather"
+            style="@style/Title.Recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weather_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Moderate Rain"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/weather"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            tools:src="@drawable/open_weather_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date" />
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            tools:text="5ºC"
+            style="@style/Title"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="@id/icon"
+            app:layout_constraintBottom_toBottomOf="@id/icon" />
+
+        <TextView
+            android:id="@+id/temp_emoji"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            tools:text="Hot"
+            style="@style/Title"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@id/temp"
+            app:layout_constraintEnd_toStartOf="@id/temp_min"
+            app:layout_constraintTop_toTopOf="@id/temp"
+            app:layout_constraintBottom_toBottomOf="@id/temp" />
+
+        <ImageView
+            android:id="@+id/temp_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/vt_temp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/icon"
+            app:layout_constraintBottom_toBottomOf="@id/icon" />
+
+        <TextView
+            android:id="@+id/temp_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            tools:text="Min 3ºC"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@id/temp_icon"
+            app:layout_constraintTop_toTopOf="@id/temp_icon" />
+
+        <TextView
+            android:id="@+id/temp_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            tools:text="Max 6ºC"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@id/temp_icon"
+            app:layout_constraintBottom_toBottomOf="@id/temp_icon" />
+
+        <TextView
+            android:id="@+id/feels_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Feels like 3 during the day."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintEnd_toStartOf="@id/humidity_icon"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/humidity_icon"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="12dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@id/humidity"
+            app:layout_constraintTop_toTopOf="@id/feels_like"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/humidity" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Humidity 44%"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

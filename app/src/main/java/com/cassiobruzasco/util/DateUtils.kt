@@ -8,20 +8,30 @@ class DateUtil {
 
     object LocaleUtil {
         val default: Locale
-            get() = Locale.FRANCE
+            get() = Locale.getDefault()
     }
 
-    fun to_MM_yyyy(millis: Long): String {
+    fun to_dd_MMM(seconds: Long): String {
         return try {
+            val millis = seconds * 1000
             require(millis != 0L)
             val apiDate = Date(millis)
 
-            val outputFormat = "MM/yyyy"
-            val outputSdf = SimpleDateFormat(outputFormat, LocaleUtil.default)
+            val outputDayFormat = "dd"
+            val outputDaySdf = SimpleDateFormat(outputDayFormat, LocaleUtil.default)
 
-            outputSdf.format(apiDate)
+            val outputMonthFormat = "MMMM"
+            val outputMonthSdf = SimpleDateFormat(outputMonthFormat, LocaleUtil.default)
+
+            "${outputDaySdf.format(apiDate)}/${
+                outputMonthSdf.format(apiDate).toLowerCase().capitalize()
+            }"
         } catch (e: Exception) {
             "-"
         }
+    }
+
+    fun getTimeOfDay(): Int {
+        return Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
     }
 }

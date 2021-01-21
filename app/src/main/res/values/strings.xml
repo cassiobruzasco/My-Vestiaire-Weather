@@ -1,6 +1,21 @@
 <resources>
-    <string name="app_name">Paris Weather</string>
+    <string name="app_name">My Vestiaire Weather</string>
     
-    <!-- Snackbar erros -->
-    <string name="snack_bar_error">This is a generic error, make sure city input and day input is correct.</string>
+    <!-- Snack bar errors -->
+    <string name="snack_bar_generic_error">Ops… A generic error. Check your connection with the internet and try again</string>
+    <string name="snack_bar_city_error">Ops… Make sure you typed a number at day input field.</string>
+    <string name="snack_bar_number_error">Ops… Make sure you typed a real city.</string>
+
+    <!-- Recycler Strings -->
+    <string name="recycler_temperature_label">%sºC</string>
+    <string name="recycler_min_temperature_label"><![CDATA[Min <b>%sºC</b>]]></string>
+    <string name="recycler_max_temperature_label"><![CDATA[Max <b>%sºC</b>]]></string>
+    <string name="recycler_humidity_label"><![CDATA[Humidity <b>%s%%</b>]]></string>
+    <string name="recycler_feels_like_label"><![CDATA[Feels like <b>%sºC</b>, with <b>%s%%</b> of rain.]]></string>
+    <string name="recycler_weather_label"><![CDATA[<b>%s</b>.]]></string>
+    <string name="recycler_temperature_emoji_hot">Hot 🥵</string>
+    <string name="recycler_temperature_emoji_cold">Cold 🥶</string>
+
+    <!-- Weather Fragment -->
+    <string name="weather_fragment_city_and_country_label">%s/%s</string>
 </resources>

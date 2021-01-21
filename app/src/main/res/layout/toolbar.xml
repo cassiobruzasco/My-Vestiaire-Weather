@@ -21,6 +21,7 @@
             style="@style/Font.Toolbar.Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
             app:layout_constraintEnd_toStartOf="@id/toolbar_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -30,7 +31,8 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/toolbar_icon"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/toolbar_title"
             app:layout_constraintEnd_toEndOf="parent"

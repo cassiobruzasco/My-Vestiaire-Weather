@@ -77,4 +77,7 @@ dependencies {
     // Event bus similar to broadcasts
     implementation "org.greenrobot:eventbus:3.2.0"
     kapt "org.greenrobot:eventbus-annotation-processor:3.2.0"
+
+    // to display icons
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 }

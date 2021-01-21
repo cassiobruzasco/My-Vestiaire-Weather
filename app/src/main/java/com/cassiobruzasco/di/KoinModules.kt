@@ -9,7 +9,7 @@ import org.koin.dsl.module
 
 // Here I map all possible modules to inject dependencies at my project
 val viewModels = module {
-    viewModel { WeatherViewModel(get()) }
+    viewModel { WeatherViewModel(get(), get()) }
 }
 
 val repositories = module {
