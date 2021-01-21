@@ -10,5 +10,11 @@ class BaseConfig {
         const val API_KEY = "648a3aac37935e5b45e09727df728ac2"
         const val UNITS = "metric"
         const val MODE = "json"
+        const val HEADER_CACHE = "android-cache"
+    }
+
+    object CacheTimeout {
+        const val DEFAULT = 1 * 60 * 60L
+        const val NONE = 0L
     }
 }

@@ -2,6 +2,7 @@ package com.cassiobruzasco.data.api
 
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.Query
 
 /**
@@ -17,6 +18,7 @@ interface WeatherAPI {
      * @param units Units of measurement
      * @param count Number of forecast days
      * @param apiKey Open Weather API KEY
+     * @param cacheTime Time to store cache
      *
      */
     @GET("daily")
@@ -25,6 +27,7 @@ interface WeatherAPI {
         @Query("mode") mode: String,
         @Query("units") units: String,
         @Query("cnt") count: Int,
-        @Query("appid") apiKey: String
+        @Query("appid") apiKey: String,
+        @Header(BaseConfig.HEADER_CACHE) cacheTime: Long
     ): Response<WeatherResponseItem>
 }

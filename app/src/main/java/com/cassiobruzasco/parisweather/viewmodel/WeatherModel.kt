@@ -3,7 +3,10 @@ package com.cassiobruzasco.parisweather.viewmodel
 import androidx.lifecycle.MutableLiveData
 import com.cassiobruzasco.data.api.WeatherResponseItem
 
-// This model maps my observables and my possible states
+/**
+ * Model to map all observables and my possible states
+ *
+ */
 class WeatherModel {
 
     val weatherOb = MutableLiveData<WeatherResponseItem>()

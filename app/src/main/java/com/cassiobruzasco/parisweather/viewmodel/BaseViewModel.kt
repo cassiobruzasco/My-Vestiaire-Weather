@@ -2,7 +2,10 @@ package com.cassiobruzasco.parisweather.viewmodel
 
 import androidx.lifecycle.ViewModel
 
-// Creating a base view model makes this project easily scalable
+/**
+ * Base view model to handle response for one or more view models
+ *
+ */
 abstract class BaseViewModel : ViewModel() {
 
     fun <T> handleResponse(result: Result<T>, onFailure: (e: Throwable?) -> Unit): T? {

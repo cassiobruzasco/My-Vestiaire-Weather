@@ -7,7 +7,13 @@ import com.cassiobruzasco.data.api.WeatherRepository
 import com.cassiobruzasco.util.DateUtil
 import kotlinx.coroutines.launch
 
-// This is my View Model class, here I will handle all data before showing at the View layer
+/**
+ * The Weather View Model
+ * This class handle all data before showing at the view layer
+ * @param repo Weather Repository
+ * @param dateUtil to format dates
+ *
+ */
 class WeatherViewModel(
     private val repo: WeatherRepository,
     val dateUtil: DateUtil
@@ -15,7 +21,14 @@ class WeatherViewModel(
 
     val model = WeatherModel()
 
-    // Main function, this function will get my main object that contains all weather data for daily forecast
+    /**
+     * The main function to get the weather forecast
+     * this function will get the main object that contains all weather data from daily forecast
+     *
+     * @param location city name
+     * @param numberOfDays number of days to forecast
+     *
+     */
     fun getWeather(location: String, numberOfDays: Int) {
         model.weatherStateOb.value = WeatherModel.WeatherState.Loading(true)
         model.weatherLoadedOb.value = false
@@ -30,7 +43,12 @@ class WeatherViewModel(
         }
     }
 
-    // Handle possible errors that might happen when typing a city name wrong or inputting a string at number field
+    /**
+     * Handle possible erros that might happend when typing a city name wrong or not putting a number at int field
+     *
+     * @param error The throwable error
+     *
+     */
     private fun handleGetWeatherError(error: Throwable?) {
         model.weatherStateOb.value = WeatherModel.WeatherState.Loading(false)
         when (error) {
