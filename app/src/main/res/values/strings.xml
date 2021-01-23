@@ -11,7 +11,7 @@
     <string name="recycler_min_temperature_label"><![CDATA[Min <b>%sºC</b>]]></string>
     <string name="recycler_max_temperature_label"><![CDATA[Max <b>%sºC</b>]]></string>
     <string name="recycler_humidity_label"><![CDATA[Humidity <b>%s%%</b>]]></string>
-    <string name="recycler_feels_like_label"><![CDATA[Feels like <b>%sºC</b>, with <b>%s%%</b> chance of rain.]]></string>
+    <string name="recycler_feels_like_label"><![CDATA[Feels like <b>%sºC</b>, with <b>%s%%</b>mm precipitation.]]></string>
     <string name="recycler_weather_label"><![CDATA[<b>%s</b>.]]></string>
     <string name="recycler_temperature_emoji_hot">Hot 🥵</string>
     <string name="recycler_temperature_emoji_cold">Cold 🥶</string>
