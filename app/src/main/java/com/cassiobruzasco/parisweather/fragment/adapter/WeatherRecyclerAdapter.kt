@@ -50,7 +50,7 @@ class WeatherRecyclerAdapter(
                     tempInt = item.list[pos].temperature.morning.toInt()
                     feelsLikeString = item.list[pos].feelsLike.morning.toInt().toString()
                 }
-                in 11..16 -> {
+                in 12..16 -> {
                     tempInt = item.list[pos].temperature.day.toInt()
                     feelsLikeString = item.list[pos].feelsLike.day.toInt().toString()
                 }
