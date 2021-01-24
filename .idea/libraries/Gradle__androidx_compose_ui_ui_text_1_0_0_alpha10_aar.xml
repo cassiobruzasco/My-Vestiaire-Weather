@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.compose.ui:ui-text:1.0.0-alpha10@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7275cb00921a3b716ae25599e8117743/jetified-ui-text-1.0.0-alpha10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd3ec6b9fdd4b486f1650b7a807fb946/jetified-ui-text-1.0.0-alpha10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4947a859a7fef8dd8b8528de78d05bac/jetified-ui-text-1.0.0-alpha10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e557952ff2fa753ce8e1a1cf0a73605a/jetified-ui-text-1.0.0-alpha10/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e557952ff2fa753ce8e1a1cf0a73605a/jetified-ui-text-1.0.0-alpha10/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e557952ff2fa753ce8e1a1cf0a73605a/jetified-ui-text-1.0.0-alpha10/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.compose.ui/ui-text/1.0.0-alpha10/16fd32e99c1ccba9d499845d8e615047b0dbdc65/ui-text-1.0.0-alpha10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

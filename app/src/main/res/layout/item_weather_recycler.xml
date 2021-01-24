@@ -122,7 +122,7 @@
             android:tint="@color/colorPrimary"
             app:layout_constraintEnd_toStartOf="@id/humidity"
             app:layout_constraintTop_toTopOf="@id/feels_like"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/feels_like"
             android:src="@drawable/humidity" />
 
         <TextView

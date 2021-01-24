@@ -19,11 +19,8 @@ android {
 
     // Here I like to use view binding to simplify the connection between layout and data
     buildFeatures {
+        dataBinding true
         viewBinding true
-    }
-
-    dataBinding {
-        enabled = true
     }
 
     kotlinOptions {

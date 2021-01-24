@@ -11,15 +11,25 @@
         <TextView
             android:id="@+id/city_country"
             style="@style/Title"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Paris"
             android:gravity="center"
             android:layout_margin="22dp"
-            android:elevation="11dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/refresh_button"
             app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/city_country"
+            app:layout_constraintBottom_toBottomOf="@id/city_country"
+            android:text="@string/weather_fragment_refresh_button"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"

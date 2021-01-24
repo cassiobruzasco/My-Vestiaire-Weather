@@ -67,9 +67,11 @@ class WeatherRecyclerAdapter(
 
             when {
                 tempInt > 25 -> {
+                    temp_emoji.visibility = View.VISIBLE
                     temp_emoji.text = context.getString(R.string.recycler_temperature_emoji_hot)
                 }
                 tempInt < 10 -> {
+                    temp_emoji.visibility = View.VISIBLE
                     temp_emoji.text = context.getString(R.string.recycler_temperature_emoji_cold)
                 }
                 else -> {

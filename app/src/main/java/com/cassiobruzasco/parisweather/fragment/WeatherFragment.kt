@@ -67,6 +67,9 @@ class WeatherFragment: Fragment() {
         )
         mBinding.recycler.layoutManager = LinearLayoutManager(requireContext())
         mBinding.recycler.adapter = WeatherRecyclerAdapter(mViewModel.dateUtil, mViewModel.model.weatherOb.value!!)
+        mBinding.refreshButton.setOnClickListener {
+            mViewModel.getWeather(CITY, DAYS)
+        }
     }
 
     /**
